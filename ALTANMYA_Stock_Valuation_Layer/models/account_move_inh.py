@@ -35,8 +35,8 @@ class AccountMovInh(models.AbstractModel):
             print('hellllllllllll...')
             self.env['stock.valuation.layer'].search([('num_reference', '=', self.invoice_origin)])._compute_inv_bill_ref()
             print(self.env['stock.valuation.layer'].search([('num_reference', '=', self.invoice_origin)]))
-        # if self.move_type == 'out_invoice':
-        #     print('hellllllllllll2222...')
-        #     self.env['stock.valuation.layer'].search([('num_reference', '=', self.invoice_origin)])._compute_inv_bill_ref()
-        #     print(self.env['stock.valuation.layer'].search([('num_reference', '=', self.invoice_origin)]))
+        if self.move_type == 'out_invoice':
+            print('hellllllllllll2222...')
+            self.env['stock.valuation.layer'].search([('num_reference', '=', self.invoice_origin)])._compute_inv_bill_ref()
+            print(self.env['stock.valuation.layer'].search([('num_reference', '=', self.invoice_origin)]))
         return False
