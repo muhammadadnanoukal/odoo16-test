@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_stock_valuation_layer_inherit" model="ir.ui.view">
+        <field name="name">stock.valuation.layer.inherit</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.stock_valuation_layer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='create_date']" position='after'>
+                <field name="customerorvendor"/>
+                <field name="reference_stock"/>
+                <field name="vendor_reference_stock"/>
+                <field name="price_stock"/>
+                <field name="current_quantity"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_valuation_layer_inherit_2" model="ir.ui.view">
+        <field name="name">stock.valuation.layer.inherit</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='create_date']" position='after'>
+                <field name="customerorvendor"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_valuation_layer_inherit_3" model="ir.ui.view">
+        <field name="name">stock.valuation.layer.inherit</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position='after'>
+                <field name="reference_stock"/>
+                <field name="num_reference"/>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="view_stock_valuation_layer_inherit_4" model="ir.ui.view">
+        <field name="name">stock.valuation.layer.inherit</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position='after'>
+                <field name="vendor_reference_stock"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_valuation_layer_inherit_5" model="ir.ui.view">
+        <field name="name">stock.valuation.layer.inherit</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='value']" position='after'>
+                <field name="current_quantity"/>
+                <field name="price_stock"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
